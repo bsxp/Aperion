@@ -17,8 +17,9 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import NavigationButton from './NavigationButton';
+import AperionLogoHoriz from '../../resources/images/AperionLogoHoriz.svg'
 
-const drawerWidth = 180;
+const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -46,13 +47,8 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   // necessary for content to be below app bar
-  toolbar: theme.mixins.toolbar,
   drawerPaper: {
     width: drawerWidth,
-  },
-  content: {
-    flexGrow: 1,
-    padding: theme.spacing(3),
   },
   buttonContainer: {
       display: 'flex', alignItems: 'center', justifyContent: 'flex-end',
@@ -73,6 +69,17 @@ const useStyles = makeStyles((theme) => ({
         bottom: 0,
         margin: 'auto'
     },
+  },
+  logoContainer: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+    height: '56px',
+    paddingLeft: '16px'
+  },
+  logo: {
+    width: '150px',
+    height: 'auto'
   }
 }));
 
@@ -88,7 +95,10 @@ function ResponsiveDrawer(props) {
 
   const drawer = (
     <div>
-      <div className={classes.toolbar} />
+      <div/>
+        <div className={classes.logoContainer}>
+          <img src={AperionLogoHoriz} className={classes.logo}/>
+        </div>
       <Divider />
       <List>
         {[
@@ -128,7 +138,7 @@ function ResponsiveDrawer(props) {
           >
             <MenuIcon style={{color: 'var(--theme-gray)'}}/>
           </IconButton>
-          <NavigationButton className={classes.aperionButton}>Aperion</NavigationButton>
+          <NavigationButton className={classes.aperionButton}><img src={AperionLogoHoriz} className={classes.logo}/></NavigationButton>
           <div className={classes.buttonContainer}>
             {!mobileOpen &&
                 [

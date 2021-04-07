@@ -27,8 +27,18 @@ export const strengthsItems = [
 
 export const partnerHeader = "Phasellus a laoreet mi"
 
+export const storyHeader = "Nunc pretium"
 
-// Nunc pretium elit velit, id sagittis nulla ullamcorper vitae. Vestibulum eget faucibus mi. In condimentum vel ex non consectetur. Nunc tempor tempor lorem, ac malesuada urna consectetur eget. Mauris ut faucibus lorem. Curabitur interdum, enim non molestie venenatis, elit purus mollis elit, vel efficitur elit nibh id nisl. Nam consequat leo ut scelerisque posuere. Ut iaculis erat quis tellus pretium, sollicitudin ultrices nisi feugiat.
+export const stories = [
+    {
+        header: "Elit velit",
+        subheader: "Elit Velit, id",
+        body: "Sagittis nulla ullamcorper vitae. Vestibulum eget faucibus mi. In condimentum vel ex non consectetur. Nunc tempor tempor lorem, ac malesuada urna consectetur eget. Mauris ut faucibus lorem. Curabitur interdum, enim non molestie venenatis."
+    }
+]
+
+
+// elit purus mollis elit, vel efficitur elit nibh id nisl. Nam consequat leo ut scelerisque posuere. Ut iaculis erat quis tellus pretium, sollicitudin ultrices nisi feugiat.
 
 // Nunc eu dui non nibh fringilla semper. Sed congue commodo arcu sed ornare. Donec commodo pulvinar sapien. Vivamus tincidunt faucibus vestibulum. Vivamus ut quam diam. Donec et nibh sapien. Nunc a est iaculis, imperdiet purus tincidunt, aliquam mi.
 

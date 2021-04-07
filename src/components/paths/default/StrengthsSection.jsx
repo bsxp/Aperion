@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { Grid, Typography, makeStyles } from '@material-ui/core'
 import HoverTextSection from '../../global/HoverTextSection'
 import { strengthsHeader, strengthsItems } from '../../../copyText/landingCopy'
+import PeopleImage from '../../../resources/images/people-working.jpeg'
 
 
 const useStyles = makeStyles(theme => ({
@@ -30,6 +31,26 @@ const useStyles = makeStyles(theme => ({
         textAlign: 'center',
         width: '100%',
         marginBottom: '48px'
+    },
+    imageContainer: {
+        display: 'relative'
+    },
+    image: {
+        position: 'absolute',
+        left: 20,
+        bottom: 0,
+        width: '420px',
+        height: 'auto',
+        transform: 'translateY(-50%)'
+    },
+    imageBackdrop: {
+        backgroundColor: 'rgb(235,235,235)',
+        height: '100px',
+        width: '150px',
+        position: 'absolute',
+        bottom: 0,
+        left: 0,
+        transform: 'translateY(-80%)'
     }
 }))
 
@@ -45,10 +66,16 @@ function StrengthsSection(props) {
                         {strengthsHeader}
                     </Typography>
                 </Grid>
-                <Grid item xs={12} container>
+                <Grid item xs={false} sm={4}>
+                    <div className={classes.imageContainer}>
+                        <div className={classes.imageBackdrop} />
+                        <img src={PeopleImage} className={classes.image} />
+                    </div>
+                </Grid>
+                <Grid item xs={12} sm={8} container>
                     {strengthsItems.map(({header, body}) => (
                         <Grid item xs={6}>
-                            <HoverTextSection header={header} body={body}  />
+                            <HoverTextSection header={header} body={body}  style={{marginBottom: '32px'}}/>
                         </Grid>
                     ))}
                 </Grid>

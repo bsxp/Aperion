@@ -20,7 +20,7 @@ const useStyles = makeStyles(theme => ({
 }))
 
 
-function HoverTextSection(props) {
+function HoverTextSection({style, ...props}) {
 
     const [ hovered, setHovered ] = React.useState(false)
 
@@ -34,7 +34,7 @@ function HoverTextSection(props) {
     })
 
     return (
-        <div onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
+        <div onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)} style={{...style}}>
             <Typography className={classes.header}>
                 {header}
             </Typography>

@@ -4,6 +4,9 @@ import { Grid } from '@material-ui/core'
 import HeroSection from './HeroSection'
 import StrengthsSection from './StrengthsSection'
 import PartnerSection from './PartnerSection'
+import SuccessesSection from './SuccessesSection'
+import ContactForm from './ContactForm'
+import Footer from '../../global/Footer'
 
 function LandingPage(props) {
     return (
@@ -16,6 +19,15 @@ function LandingPage(props) {
             </Grid>
             <Grid item xs={12}>
                 <PartnerSection />
+            </Grid>
+            <Grid item xs={12}>
+                <SuccessesSection />
+            </Grid>
+            <Grid item xs={12}>
+                <ContactForm />
+            </Grid>
+            <Grid item xs={12}>
+                <Footer />
             </Grid>
         </Grid>
     )

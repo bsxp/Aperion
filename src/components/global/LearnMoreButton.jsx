@@ -23,8 +23,8 @@ function LearnMoreButton(props) {
     const { style, children, ...rest} = props
 
     return (
-        <Button className={classes.root}>
-            Learn more
+        <Button className={classes.root} style={{...style}} {...rest}>
+            {typeof children === 'string' ? children : "Learn more"}
         </Button>
     )
 }

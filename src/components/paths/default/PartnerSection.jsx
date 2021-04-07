@@ -19,10 +19,10 @@ const useStyles = makeStyles(theme => ({
             paddingLeft: '4%',
             paddingRight: '4%'
         },
-        paddingTop: '128px',
+        paddingTop: '64px',
         display: 'flex',
         justifyContent: 'center',
-        paddingBottom: '128px',
+        paddingBottom: '64px',
         backgroundColor: 'rgb(240,240,240)'
     },
     header: {
